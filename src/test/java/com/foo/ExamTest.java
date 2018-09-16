@@ -1,11 +1,11 @@
 package com.foo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ExamTest {
 
@@ -26,5 +26,10 @@ public class ExamTest {
     public static void tearDown() {
         skuIds = null;
     }
-
+    
+    @Test
+    public void SkuAggregationTest(){
+    	AggregationService aggregation  = new SkuAggregationImpl();
+    	aggregation.SkuAggregation(skuIds);
+    }
 }

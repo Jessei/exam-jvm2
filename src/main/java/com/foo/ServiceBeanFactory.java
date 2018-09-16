@@ -154,3 +154,17 @@ class SkuEntity implements Serializable{
     private List<ChannelInventoryDTO> inventoryDTOS;
 }
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+class SkuEntityShow implements Serializable{
+    
+	private static final long serialVersionUID = 7552662859023102671L;
+	private String id;
+    private String name;
+    private String artNo;
+    private String spuId;
+    private String skuType;
+    private String price;
+    private String inventory;
+}
